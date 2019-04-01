@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.45" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.csci.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="212.0">
+         <children>
+            <Pane prefHeight="52.0" prefWidth="355.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="txtSearchField" layoutX="8.0" layoutY="11.0" prefHeight="31.0" prefWidth="257.0" promptText="Enter search criteria" />
+                  <Button fx:id="btnSearchButton" layoutX="284.0" layoutY="11.0" mnemonicParsing="false" text="Search" />
+               </children>
+            </Pane>
+            <ListView fx:id="lstSearchResults" layoutX="4.0" layoutY="55.0" prefHeight="401.0" prefWidth="356.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0" />
+            <Button fx:id="btnResetList" layoutX="152.0" layoutY="457.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="356.0" text="Reset List" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="btnSave" layoutX="14.0" layoutY="418.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="106.0" text="Save" />
+            <Button fx:id="btnDelete" layoutX="165.0" layoutY="418.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="106.0" text="Delete" />
+            <Button fx:id="btnClear" layoutX="315.0" layoutY="418.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="106.0" text="Clear" />
+            <TextField fx:id="txtTitle" layoutX="131.0" layoutY="81.0" prefHeight="40.0" prefWidth="237.0" promptText="Book Title" />
+            <TextField fx:id="txtAuthor" layoutX="131.0" layoutY="154.0" prefHeight="40.0" prefWidth="237.0" promptText="Book Author" />
+            <TextField fx:id="txtISBN" layoutX="131.0" layoutY="227.0" prefHeight="40.0" prefWidth="237.0" promptText="Book ISBN" />
+            <Text layoutX="33.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" textAlignment="CENTER" wrappingWidth="53.6708984375" />
+            <Text layoutX="37.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" />
+            <Text layoutX="44.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+            <Text layoutX="46.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre" />
+            <ComboBox fx:id="ddlGenre" layoutX="131.0" layoutY="311.0" prefHeight="40.0" prefWidth="237.0" />
+            <Button fx:id="btnUndelete" layoutX="358.0" layoutY="14.0" mnemonicParsing="false" text="Undelete" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

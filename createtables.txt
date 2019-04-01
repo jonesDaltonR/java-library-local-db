@@ -1,0 +1,3 @@
+CREATE TABLE `author` ( `auth_id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL );
+CREATE TABLE `genre` ( `gen_id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL );
+CREATE TABLE "book" ( `isbn` INTEGER NOT NULL, `author` INTEGER NOT NULL, `title` TEXT NOT NULL, `genre` INTEGER NOT NULL, `status` TEXT DEFAULT 'A', `update_date` INTEGER, PRIMARY KEY(`isbn`), FOREIGN KEY(`genre`) REFERENCES `genre`(`gen_id`), FOREIGN KEY(`author`) REFERENCES `author`(`auth_id`) );
